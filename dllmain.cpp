@@ -185,6 +185,7 @@ int Init()
         injector::MakeJMP(0x00414FAF, 0x41510B, true);
 
     // Disable CD check...
+    injector::MakeNOP(0x00406125, 2, true);
     injector::MakeNOP(0x0040607C, 2, true);
 
     return 0;
